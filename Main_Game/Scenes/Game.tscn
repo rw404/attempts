@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Field/Field.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/Snake.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Game.gd" type="Script" id=3]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="BackGround" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Snake" parent="." instance=ExtResource( 2 )]
+position = Vector2( 25, 15.556 )
