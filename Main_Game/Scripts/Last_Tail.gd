@@ -10,7 +10,17 @@ func _physics_process(delta):
 			cur_dir = directions[0]
 			remove_from_tail()
 	position += cur_dir/2
-	$last_tail_anim.play("last_tail")
+	
+	if(cur_dir == Vector2(1, 0)):
+		$last_tail_anim.play("last_tail_right")
+	elif(cur_dir == Vector2(-1, 0)):
+		$last_tail_anim.play("last_tail_left")
+	elif(cur_dir == Vector2(0, 1)):
+		$last_tail_anim.play("last_tail_down")
+	elif(cur_dir == Vector2(0, -1)):
+		$last_tail_anim.play("last_tail_up")
+	else:
+		pass
 
 func remove_from_tail():
 	directions.pop_front()

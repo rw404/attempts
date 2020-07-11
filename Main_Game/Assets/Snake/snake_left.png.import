@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/last_tail_1.png-be359f064518f18c2f6cf0f81ac9e9c0.stex"
+path="res://.import/snake_left.png-93f6d0a5a9ffb0e6bbbe42ff8d9662c9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Snake/last_tail_1.png"
-dest_files=[ "res://.import/last_tail_1.png-be359f064518f18c2f6cf0f81ac9e9c0.stex" ]
+source_file="res://Assets/Snake/snake_left.png"
+dest_files=[ "res://.import/snake_left.png-93f6d0a5a9ffb0e6bbbe42ff8d9662c9.stex" ]
 
 [params]
 

@@ -3,7 +3,7 @@ extends Node2D
 var direction = Vector2(1, 0)
 onready var tail = preload("res://Scenes/Tail.tscn")
 onready var last_tail = preload("res://Scenes/Last_Tail.tscn")
-const gap = -8
+const gap = -6
 var next_tail_dir = Vector2(1, 0)
 var prev_tail_dir = Vector2(1, 0)
 
@@ -12,17 +12,49 @@ func _ready():
 
 func _physics_process(delta):
 	if(Input.is_action_pressed("ui_down")):
+		$head/sprite_head_down.visible = true
+		$head/sprite_head_left.visible = false
+		$head/sprite_head_right.visible = false
+		$head/sprite_head_up.visible = false
+		
+		$head/Head_collision_down.disabled = false
+		$head/Head_collision_right.disabled = true
+		$head/Head_collision_up.disabled = true
+		$head/Head_colllision_left.disabled = true
 		direction = Vector2(0, 1)
-		pass
 	elif(Input.is_action_pressed("ui_up")):
+		$head/sprite_head_down.visible = false
+		$head/sprite_head_left.visible = false
+		$head/sprite_head_right.visible = false
+		$head/sprite_head_up.visible = true
+		
+		$head/Head_collision_down.disabled = true
+		$head/Head_collision_right.disabled = true
+		$head/Head_collision_up.disabled = false
+		$head/Head_colllision_left.disabled = true
 		direction = Vector2(0, -1)
-		pass
 	elif(Input.is_action_pressed("ui_left")):
+		$head/sprite_head_down.visible = false
+		$head/sprite_head_left.visible = true
+		$head/sprite_head_right.visible = false
+		$head/sprite_head_up.visible = false
+		
+		$head/Head_collision_down.disabled = true
+		$head/Head_collision_right.disabled = true
+		$head/Head_collision_up.disabled = true
+		$head/Head_colllision_left.disabled = false
 		direction = Vector2(-1, 0)
-		pass
 	elif(Input.is_action_pressed("ui_right")):
+		$head/sprite_head_down.visible = false
+		$head/sprite_head_left.visible = false
+		$head/sprite_head_right.visible = true
+		$head/sprite_head_up.visible = false
+		
+		$head/Head_collision_down.disabled = true
+		$head/Head_collision_right.disabled = false
+		$head/Head_collision_up.disabled = true
+		$head/Head_colllision_left.disabled = true
 		direction = Vector2(1, 0)
-		pass
 	else:
 		#direction = Vector2.ZERO
 		pass
@@ -64,6 +96,7 @@ func destroy(element):
 	while(temp_element != element):
 		remove_child(temp_element)
 		temp_element = get_child(get_child_count() - 1)
+	remove_child(element)
 	add_last_tail()
 
 func add_last_tail():
