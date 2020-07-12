@@ -17,6 +17,11 @@ animations = [ {
 "name": "last_tail_down",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "last_tail_up",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "last_tail_left",
@@ -25,11 +30,6 @@ animations = [ {
 "frames": [ ExtResource( 1 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "last_tail_right",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 7 ) ],
-"loop": true,
-"name": "last_tail_up",
 "speed": 5.0
 } ]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Field/Field.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Snake.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Game.gd" type="Script" id=3]
+[ext_resource path="res://Fonts/DejaVu Sans Mono for Powerline.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="SegmentShape2D" id=1]
 a = Vector2( 7.96793, 6.47927 )
@@ -19,6 +20,14 @@ b = Vector2( 6.5694, 171.98 )
 [sub_resource type="SegmentShape2D" id=4]
 a = Vector2( 313.53, 7.98042 )
 b = Vector2( 313.545, 171.98 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 8
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 8
+font_data = ExtResource( 4 )
 
 [node name="Game" type="Node2D"]
 script = ExtResource( 3 )
@@ -46,14 +55,27 @@ shape = SubResource( 3 )
 [node name="right_ground_collision" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 4 )
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
-margin_left = 70.7467
-margin_top = -1.96873
-margin_right = 137.747
-margin_bottom = 16.0313
-text = "Score: "
+[node name="Score" type="RichTextLabel" parent="."]
+margin_left = 20.571
+margin_top = -0.597976
+margin_right = 139.571
+margin_bottom = 11.402
+custom_fonts/normal_font = SubResource( 5 )
+text = "Score: 0"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="HighScore" type="RichTextLabel" parent="."]
+margin_left = 164.0
+margin_top = -1.0
+margin_right = 300.0
+margin_bottom = 11.0
+custom_fonts/normal_font = SubResource( 6 )
+text = "Highscore: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

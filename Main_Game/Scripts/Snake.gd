@@ -6,8 +6,10 @@ onready var last_tail = preload("res://Scenes/Last_Tail.tscn")
 const gap = -6
 var next_tail_dir = Vector2(1, 0)
 var prev_tail_dir = Vector2(1, 0)
+var default_position = Vector2.ZERO
 
 func _ready():
+	default_position = $head.position
 	add_last_tail()
 
 func _physics_process(delta):
