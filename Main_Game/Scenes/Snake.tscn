@@ -32,14 +32,17 @@ position = Vector2( 1.975, 0.0317307 )
 shape = SubResource( 1 )
 
 [node name="Head_collision_down" type="CollisionShape2D" parent="head"]
+visible = false
 position = Vector2( -0.0463696, 2.04637 )
 shape = SubResource( 2 )
 
 [node name="Head_colllision_left" type="CollisionShape2D" parent="head"]
+visible = false
 position = Vector2( -2.04637, 0.0463691 )
 shape = SubResource( 3 )
 
 [node name="Head_collision_up" type="CollisionShape2D" parent="head"]
+visible = false
 position = Vector2( -0.0463696, -1.94751 )
 shape = SubResource( 4 )
 
