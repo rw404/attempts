@@ -1023,7 +1023,7 @@ def clever_input(s1 = ""):
     return outAnswer_rus
 #----------------------------------------------------------------------------------------------------
 
-bot = telebot.TeleBot('1367021435:AAEXzAa6upCicjuen8BzTZ76jr29p7CvcQY')
+bot = telebot.TeleBot('HERE IS YOUR BOT API')
 
 @bot.message_handler(commands=['start'])
 
