@@ -693,13 +693,13 @@ def back_lang(s = ""):
             st += 'д'
         elif el == 'e':
             if i+1 < l and s[i+1] == 'h':
-                i++
+                i+=1
                 st += 'э'
             else:
                 st += 'е'
         elif el == 'z':
             if i+1 < l and s[i+1] == 'h':
-                i++
+                i+=1
                 st += 'ж'
             else:
                 st += 'з'
@@ -707,7 +707,7 @@ def back_lang(s = ""):
             st += 'и'
         elif el == 'j':
             if i+1 < l and s[i+1] == 'a':
-                i++
+                i+=1
                 st += 'я'
             else:
                 st += 'й'
@@ -727,10 +727,10 @@ def back_lang(s = ""):
             st += 'р'
         elif el == 's':
             if i+1 < l and s[i+1] == 'h':
-                i++
+                i+=1
                 
                 if i+1 < l and s[i+1] == '\'':
-                    i++
+                    i+=1
                     st += 'щ'
                 else:
                     st += 'ш'
@@ -746,7 +746,7 @@ def back_lang(s = ""):
             st += 'х'
         elif el == 'c':
             if i+1 < l and s[i+1] == 'h':
-                i++
+                i+=1
                 st += 'ч'
             else:
                 st += 'ц'
@@ -754,10 +754,10 @@ def back_lang(s = ""):
             st += 'ъ'
         elif el == 'y':
             if i+1 < l and s[i+1] == 'o':
-                i++
+                i+=1
                 st += 'ё'
             elif i+1 < l and s[i+1] == 'u':
-                i++
+                i+=1
                 st += 'ю'
             else:
                 st += 'ы'
@@ -775,13 +775,13 @@ def back_lang(s = ""):
             st += 'Д'
         elif el == 'E':
             if i+1 < l and s[i+1] == 'H':
-                i++
+                i+=1
                 st += 'Э'
             else:
                 st += 'Е'
         elif el == 'Z':
             if i+1 < l and s[i+1] == 'H':
-                i++
+                i+=1
                 st += 'Ж'
             else:
                 st += 'З'
@@ -791,7 +791,7 @@ def back_lang(s = ""):
             st += 'И'
         elif el == 'J':
             if i+1 < l and s[i+1] == 'A':
-                i++
+                i+=1
                 st += 'Я'
             else:
                 st += 'Й'
@@ -811,10 +811,10 @@ def back_lang(s = ""):
             st += 'Р'
         elif el == 'S':
             if i+1 < l and s[i+1] == 'H':
-                i++
+                i+=1
                 
                 if i+1 < l and s[i+1] == '\'':
-                    i++
+                    i+=1
                     st += 'Щ'
                 else:
                     st += 'Ш'
@@ -830,16 +830,16 @@ def back_lang(s = ""):
             st += 'Х'
         elif el == 'C':
             if i+1 < l and s[i+1] == 'H':
-                i++
+                i+=1
                 st += 'Ч'
             else:
                 st += 'C'
         elif el == 'Y':
             if i+1 < l and s[i+1] == 'O':
-                i++
+                i+=1
                 st += 'Ё'
             elif i+1 < l and s[i+1] == 'U':
-                i++
+                i+=1
                 st += 'Ю'
             else:
                 st += 'Ы'
