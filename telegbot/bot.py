@@ -679,7 +679,8 @@ def to_lang(s = ""):
 def back_lang(s = ""):
     st = ""
     l = int(len(s))
-    for i in range(l):
+    i = 0
+    while i < l:
         el = s[i]
         if el == 'a':
             st += 'а'
@@ -845,6 +846,7 @@ def back_lang(s = ""):
                 st += 'Ы'
         else:
             st += el
+        i+=1
     return st
 
 #END OF TRANSLIT FUNCTIONS
@@ -1023,7 +1025,7 @@ def clever_input(s1 = ""):
     return outAnswer_rus
 #----------------------------------------------------------------------------------------------------
 
-bot = telebot.TeleBot('HERE IS YOUR BOT API')
+bot = telebot.TeleBot('1367021435:AAEXzAa6upCicjuen8BzTZ76jr29p7CvcQY')
 
 @bot.message_handler(commands=['start'])
 
@@ -1033,6 +1035,7 @@ def start_message(message):
 
 @bot.message_handler(content_types=['text'])
 def send_text(message):
+
     input_message = message.text
     toOut = clever_input(input_message)
     #toOut is a neural network text
